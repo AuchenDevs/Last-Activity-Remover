@@ -1,4 +1,5 @@
 @echo off
+IF not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /B)
 title Last Activity View deleter ^| By AuchenDevs
 
 
