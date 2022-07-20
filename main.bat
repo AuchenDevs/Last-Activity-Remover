@@ -28,11 +28,9 @@ for /F  %%a in ('wevtutil.exe el') do (wevtutil.exe cl "%%a" && set totalev+=1)
 
 ::Delete "View Folder in Explorer"
 reg delete "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU" /f
-reg add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU" /f 
 
 ::Delete MUICache (Thats for muicache viewer but anyways)
 reg delete "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache" /f
-reg add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache" /f 
 
 ::Delete prefetch the last one for hide all
 takeown /f C:\Windows\Prefetch /r /d s
